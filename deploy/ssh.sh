@@ -180,6 +180,7 @@ ssh_deploy() {
       if [ $_set_level -ge $NOTIFY_LEVEL_ERROR ]; then
         _send_notify "Failed to deploy to $DEPLOY_SSH_SERVER" "Some or all of the files have not been transmitted to the server." "$NOTIFY_HOOK" "$RENEW_SKIP"
       fi
+    fi
   done
 
   return $_returnCode
